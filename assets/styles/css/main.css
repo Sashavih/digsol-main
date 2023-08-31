@@ -240,6 +240,32 @@ a {
   opacity: 0.8;
 }
 
+.up {
+  display: none;
+  position: fixed;
+  bottom: 7rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-image: url("../../imgs/arrow-up.png");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  background-color: #373737;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  transform: translatey(0px);
+  animation: float 3s ease-in-out infinite;
+  left: 3rem;
+}
+.up:hover {
+  opacity: 0.8;
+}
+
 .whats {
   right: 5rem;
   background-image: url("../../imgs/whats.png");
@@ -272,13 +298,23 @@ a {
   .btn:hover span {
     padding-right: 0;
   }
+  .whats {
+    right: 2rem;
+  }
+  .mail {
+    right: 6.5rem;
+  }
+  .up {
+    bottom: 7rem;
+    left: 2rem;
+  }
 }
 @media screen and (max-width: 480px) {
   body {
     font-size: 14px;
   }
   .title {
-    font-size: 25px;
+    font-size: 20px;
     margin-bottom: 1.5rem;
   }
   .subtitle {
@@ -294,7 +330,11 @@ a {
     height: 2.5rem;
   }
   .whats {
-    right: 2.5rem;
+    right: 5rem;
+  }
+  .up {
+    right: 1.3rem;
+    left: auto;
   }
 }
 .header {
@@ -559,6 +599,7 @@ a {
 }
 .pluses-box__item:hover {
   box-shadow: 0px 0px 0px 4px #C8C8C8;
+  background-color: #1e1e1e;
 }
 .pluses-box__item p {
   color: #C8C8C8;
@@ -747,6 +788,7 @@ a {
 }
 .marketing-box__about:hover {
   box-shadow: 0px 0px 0px 4px #C8C8C8;
+  background-color: #1e1e1e;
 }
 .marketing-box__about a {
   align-self: center;
@@ -893,6 +935,7 @@ a {
   height: 55px;
   border: none;
   transition: 0.7s;
+  cursor: pointer;
 }
 .friends-slider .slick-prev {
   left: -15%;
