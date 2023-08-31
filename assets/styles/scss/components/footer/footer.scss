@@ -1,0 +1,30 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 3rem 0;
+    background-color: $back-dark-gray;
+}
+.privacy-link{
+    margin: auto;
+    color: $text-dark-gray;
+    cursor: pointer;
+}
+.footer__links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+a{
+    color: $text-dark-gray;
+    &:hover{
+        color: $red;
+    }
+}
+}
+@media screen and (max-width: $mobile-width){
+    .footer__links{
+        gap: 1rem;
+    }
+}

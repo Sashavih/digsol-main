@@ -1,0 +1,69 @@
+.friends{
+    margin: 8rem 0;
+}
+  .friends-slider {
+    position: relative;
+    margin: 5em auto;
+  width: 60%;
+    text-align: center;
+  
+    .slick-arrow {
+      top: 5%;
+      position: absolute;
+      z-index: 10;
+      font-size: 0;
+      width: 55px;
+      height: 55px;
+      border: none;
+      transition: 0.7s;
+    }
+  
+    .slick-prev {
+      left: -15%;
+      background: url("../../imgs/slider-prev.png") 0 0 / 100% no-repeat;
+      &:hover {
+        background: url("../../imgs/slider-prev-hover.png") 0 0 / 100% no-repeat;
+      }
+    }
+  
+    .slick-next {
+      right: -15%;
+      background: url("../../imgs/slider-next.png") 0 0 / 100% no-repeat;
+      &:hover {
+        background: url("../../imgs/slider-next-hover.png") 0 0 / 100% no-repeat;
+      }
+    }
+  
+    img{
+        max-width: 50%;
+    }
+  }
+
+  @media screen and (max-width: $tablet-width){
+    .friends-slider {
+        .slick-arrow {
+            top: 13%;
+          }
+        }
+  }
+
+  @media screen and (max-width: $mobile-width){
+    .friends{
+        margin: 3rem 0;
+    }
+    .friends-slider {
+        margin: 4em auto;
+    .slick-arrow {
+        top: 23%;
+        width: 40px;
+        height: 40px;
+      }
+      .slick-prev {
+        left: -20%;
+      }
+      .slick-next {
+       right: -20%;
+      }
+    }
+  } 
+   

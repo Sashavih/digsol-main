@@ -1,0 +1,10 @@
+
+.board{
+    min-height: 100vh;
+}
+@media screen and (max-width: $mobile-width){
+    .board{
+        min-height: 100%;
+        padding-bottom: 5rem;
+    }
+}

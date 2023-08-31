@@ -1,0 +1,140 @@
+
+.pluses{
+    margin: 7rem 0;
+}
+.pluses-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    margin: 5rem auto 0 auto;
+    gap: 3rem;
+    width: 85%;
+}
+.pluses-box__item{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    gap: 1rem;
+    width: 50%;
+    min-height: 17.5rem;
+    border-radius: 20px;
+    padding: 2rem 2rem 3rem 2rem;
+    box-shadow: 0px 0px 0px 1.5px $text-gray;
+    transition: box-shadow 0.6s linear;
+    margin: 0.5em;
+    &:hover{
+        box-shadow: 0px 0px 0px 4px $text-gray;
+    }
+    p{
+        color: $text-gray;
+        margin-bottom: 2rem;
+    }
+}
+.pluses-box__title{
+    font-size: 26px;
+    margin: 0 auto 0 auto ;
+    text-transform: uppercase;
+    cursor: default;
+}
+.pluses__content{
+    background-color: $black-back;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: center;
+    color: black;
+    font-weight: 700;
+    font-size: 14px;
+    width: 100%;
+    padding: 3rem 5rem;
+    img{
+        max-width: 2.5rem;
+    }
+    p{
+        font-family: 'Roboto-Light', sans-serif;
+        margin-top: 1.5rem;
+        
+    }
+}
+.pluses__item{
+    background-color: $text-gray;
+    width: 12rem;
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    text-transform: lowercase;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+@media screen and (max-width: $tablet-width){
+    .pluses-box__title{
+        font-size: 20px;
+    }
+    .pluses-box{
+        gap: 2rem;
+        margin: 4rem auto 0 auto;
+    }
+    .pluses-box__item{
+        width: 50%;
+        min-height: 21rem;     
+    }
+    .pluses__content{
+        padding: 2rem 3rem;
+        gap: 1.5rem;
+    }
+    .pluses__item{
+        width: 10rem;
+        padding: 1rem;
+    }
+}
+@media screen and (max-width: $mobile-width){
+    .pluses{
+        margin: 3rem 0;
+    }
+    .pluses-box__title{
+        font-size: 15px;
+    }
+    .pluses-box{
+        flex-direction: column;
+        align-items: center;
+        margin: 3rem auto;
+        width: 93%;
+        gap: 1.5rem;
+    }
+    .pluses-box__item{
+        text-align: center;
+        padding: 1.5rem;
+        width: 95%;
+        min-height: 13rem;
+        a{
+            justify-content: end;
+            justify-self: flex-end;
+        }
+    }
+ 
+    .pluses__content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin: 2rem auto;
+        font-size: 12px;
+        justify-content: center;
+        img{
+            max-width: 2rem;
+        }
+        p{
+            margin-top: 1rem;
+        }
+    }
+    .pluses__item{
+        width:9rem;
+        min-height: 7rem;
+        padding: 0.7rem;
+    }
+    
+}

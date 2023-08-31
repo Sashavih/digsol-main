@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+
+  :active,
+  :hover,
+  :focus {
+    outline: 0;
+    outline-offset: 0;
+  }
+  body {
+    font-family: "din", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    background-color: $back-dark-gray;
+    overflow: auto;
+    height: 100%;
+  }
+  li {
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  .fade-animation{
+    display: none;
+    transform: translateX(-150%);
+    animation: ani 2s forwards;
+  }
+  .fade-animation2{
+    display: none;
+    transform: translateX(-50%);
+    animation: ani 2.5s forwards;
+  }
+  .fade-animation3{
+    display: none;
+    transform: translateX(-50%);
+    animation: ani 3s forwards;
+  }
+  .fade-animation4{
+    display: none;
+    transform: translateX(-50%);
+    animation: ani 3.5s forwards;
+  }
+
+  .title{
+    font-family: 'din', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    cursor: default;
+    transition: 0.4s;
+  }
+  .subtitle{
+    font-family: 'din', sans-serif;
+    font-size: 34px;
+   
+    margin: 3rem auto;
+    text-transform: uppercase;
+    cursor: default;
+    text-align: center;
+  }
+  .btn{
+    width: 13rem;
+    text-transform: uppercase;
+    font-family: inherit;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    border-radius: 60px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s;
+   }
+   .btn_border{
+    border: 1.7px solid $orange;
+    border-radius: 50px;
+   }
+   .btn {
+    span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  span:after {
+    content: '';
+ background: url("../../imgs/arrow.png") no-repeat;
+ background-size: 15px 15px;
+ width: 15px;
+ height: 15px;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+  }
+  &:hover {
+    span {
+        padding-right: 25px;
+      }
+  }
+  &:hover{
+    span:after {
+        opacity: 1;
+        right: 0;
+      }
+  }
+}
+   .orange{
+    background-color: $orange;
+   }
+   .red{
+    background-color: $red;
+   }
+.block{
+    display: block;
+    transform: translateX(-150%);
+    animation: ani-drop-down 1s forwards;
+}
+.none{
+    display: none;
+}
+
+
+   @keyframes ani {
+    0% {
+      transform: translateY(-150%);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes ani-drop-down {
+    0% {
+      transform: translateY(-30%);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translatey(0px);
+    }
+  
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+      transform: translatey(-20px);
+    }
+  
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translatey(0px);
+    }
+  }
+  
+  .messageAnimation {
+    display: none;
+    position: fixed;
+    bottom: 7rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 1rem;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+    animation: float 3s ease-in-out infinite; 
+    &:hover{
+      opacity: 0.8;
+     }
+  }
+.whats{
+  right: 5rem;
+  background-image: url("../../imgs/whats.png");
+ 
+}
+.mail{
+  right: 10rem;
+  background-image: url("../../imgs/mail.png");
+}
+  
+  @media screen and (max-width: $tablet-width){
+    .title{
+        font-size: 36px;
+        margin-bottom: 1.5rem;
+      }
+      .subtitle{
+        font-size: 30px;
+        margin: 3.5rem auto;
+      }
+      .btn{
+        width: 13rem;
+        font-size: 10px;
+        padding: 1rem ;
+        span:after {
+         background-size: 0;
+         width: 0;
+         height: 0;
+          }
+          &:hover {
+            span {
+                padding-right: 0;
+              }
+          }
+      }
+  }
+  @media screen and (max-width: $mobile-width){
+    body{
+        font-size: 14px;
+
+    }
+    .title{
+        font-size: 25px;
+        margin-bottom: 1.5rem;
+      }
+      .subtitle{
+        font-size: 20px;
+        margin: 3.5rem auto 1rem auto;
+      }
+    .btn{
+        width: 10rem; 
+  }
+  .messageAnimation {
+    bottom: 4rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .whats{
+    right: 2.5rem;
+  }
+}
