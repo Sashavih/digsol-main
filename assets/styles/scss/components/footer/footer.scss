@@ -24,6 +24,9 @@ a{
 }
 }
 @media screen and (max-width: $mobile-width){
+    .footer{
+        padding: 3rem 0 8rem 0;
+    }
     .footer__links{
         gap: 1rem;
     }
