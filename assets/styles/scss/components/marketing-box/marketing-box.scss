@@ -8,11 +8,10 @@
     border: 1.7px;
     width: 85%;
     margin: 2rem auto;
-    img{
-        margin: auto;
-        max-width: 80%;
-
-    }
+}
+.marketing-box__img{
+    margin: auto;
+    max-width: 80%;
 }
 .marketing-box__about{
     font-family: 'Roboto-Regular', sans-serif;
@@ -31,9 +30,6 @@
     a{
         align-self: center;
     }
-    li{
-        margin-top: 0.5rem;
-    }
 }
 .marketing__title{
     font-family: 'Roboto-Bold', sans-serif;
@@ -44,25 +40,15 @@
     text-align: start;
 }
 
-.marketing-box_icon{
-    margin-top: 0.4rem;
-    cursor: default;
-    &::before{
-    content: "";
- padding:0.7rem ;
- margin-right: 1rem;
- margin-right: 0.5;
-  background: url("../../imgs/orange-icon.png") no-repeat;
-  background-size: 60%;
-  background-position: 50% 50%;
-    }
-    &:hover{
-        &::before{
-          background: url("../../imgs/gray-icon.png") no-repeat;
-          background-size: 60%;
-          background-position: 50% 50%;
-            }
-    }
+.marketing-box__icon{
+display: flex;
+flex-direction: row;
+gap: 0.5rem;
+align-items: center;
+padding:0.2rem;
+img{
+    max-width: 0.6rem;
+}
 }
 
 @media screen and (max-width: $tablet-width){
@@ -74,7 +60,6 @@
         padding: 2rem 1rem;
     }
 }
-
 @media screen and (max-width: $mobile-width){
 .marketing-box{
     width: 93%;
@@ -83,18 +68,13 @@
 }
 .marketing-box__about{
     align-items: center;
+    padding: 1rem;
     gap: 0.5rem;
-    p{
-        text-align: center;
-    }
+}
+.center{
+    text-align: center;
 }
 .marketing__title{
     font-size: 16px;
-}
-.marketing-box_icon{
-    margin-top: 0rem;
-    &::before{
- padding:0.4rem ;
-    }
 }
 }
