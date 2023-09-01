@@ -333,6 +333,7 @@ a {
     right: 5rem;
   }
   .up {
+    bottom: 4rem;
     right: 1.3rem;
     left: auto;
   }
@@ -567,7 +568,7 @@ a {
 @media screen and (max-width: 480px) {
   .board {
     min-height: 100%;
-    padding-bottom: 5rem;
+    padding-bottom: 0.5rem;
   }
 }
 .pluses {
