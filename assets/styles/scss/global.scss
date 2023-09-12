@@ -170,9 +170,9 @@
   .messageAnimation {
     display: none;
     position: fixed;
-    bottom: 7rem;
-    width: 3.5rem;
-    height: 3.5rem;
+    bottom: 9.5rem;
+    width: 3rem;
+    height: 3rem;
     padding: 1rem;
     z-index: 99;
     border: none;
@@ -215,79 +215,78 @@
       opacity: 0.8;
      }
   }
-
-.whats{
-  right: 5rem;
-  background-image: url("../../imgs/whats.png");
-}
-.mail{
-  right: 10rem;
-  background-image: url("../../imgs/mail.png");
-}
-
-  
-  @media screen and (max-width: $tablet-width){
-    .title{
-        font-size: 36px;
-        margin-bottom: 1.5rem;
-      }
-      .subtitle{
-        font-size: 30px;
-        margin: 3.5rem auto;
-      }
-      .btn{
-        width: 13rem;
-        font-size: 10px;
-        padding: 1rem ;
-        span:after {
-         background-size: 0;
-         width: 0;
-         height: 0;
-          }
-          &:hover {
-            span {
-                padding-right: 0;
-              }
-          }
-      }
-      .whats{
-        right: 2rem;
-      }
-      .mail{
-        right: 6.5rem;
-      }
-      .up {
-        bottom: 7rem;
-        left: 2rem;
-      }
-  }
-  @media screen and (max-width: $mobile-width){
-    body{
-        font-size: 14px;
-
-    }
-    .title{
-        font-size: 20px;
-        margin-bottom: 1.5rem;
-      }
-      .subtitle{
-        font-size: 20px;
-        margin: 3.5rem auto 1rem auto;
-      }
-    .btn{
-        width: 10rem; 
-  }
-  .messageAnimation {
-    bottom: 4rem;
-    width: 2.5rem;
-    height: 2.5rem;
-  }
   .whats{
     right: 5rem;
+    background-image: url("../../imgs/whats.png");
   }
-  .up{
-    bottom: 4rem;
-    right: 1.3rem;
-    left: auto;
+  .mail{
+    right: 10rem;
+    background-image: url("../../imgs/mail.png");
   }
-}
+  
+    
+    @media screen and (max-width: $tablet-width){
+      .title{
+          font-size: 36px;
+          margin-bottom: 1.5rem;
+        }
+        .subtitle{
+          font-size: 30px;
+          margin: 3.5rem auto;
+        }
+        .btn{
+          width: 13rem;
+          font-size: 10px;
+          padding: 1rem ;
+          span:after {
+           background-size: 0;
+           width: 0;
+           height: 0;
+            }
+            &:hover {
+              span {
+                  padding-right: 0;
+                }
+            }
+        }
+        .whats{
+          right: 2rem;
+        }
+        .mail{
+          right: 6.5rem;
+        }
+        .up {
+          bottom: 7rem;
+          left: 2rem;
+        }
+    }
+    @media screen and (max-width: $mobile-width){
+      body{
+          font-size: 14px;
+  
+      }
+      .title{
+          font-size: 20px;
+          margin-bottom: 1.5rem;
+        }
+        .subtitle{
+          font-size: 20px;
+          margin: 3.5rem auto 1rem auto;
+        }
+      .btn{
+          width: 10rem; 
+    }
+    .messageAnimation {
+      bottom: 4rem;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    .whats{
+      right: 5rem;
+    }
+    .up{
+      bottom: 4rem;
+      right: 1.3rem;
+      left: auto;
+    }
+  }

@@ -1,0 +1,64 @@
+
+.main-block{
+    background: no-repeat center/100% url('../../imgs/luk.jpg');
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-content{
+    width: 50%;
+    padding: 1rem 2rem;
+    height: 100%;
+    margin: 0 5rem;
+    cursor: default;
+    p{
+        width: 85%;
+        font-size: 18px;
+    }
+}
+.main-btns{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 3rem 0;
+}
+
+
+@media screen and (max-width: $tablet-width){
+    .main-block{
+        align-items: center;
+        text-align: center;
+    }
+    .main-content{
+        width: 85%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .main-btns{
+        justify-content: center;
+    }
+  
+}
+@media screen and (max-width: $tablet-width){
+    .main-content{
+        width: 87%;
+        margin: 0 5rem;
+        cursor: default;    
+        p{
+            margin: auto;
+            font-size: 15px;
+        }
+    }
+}
+@media screen and (max-width: $mobile-width){
+    .main-content{  
+        width: 95%;
+        p{
+            width:90%;
+            font-size: 14px;
+        }
+    }
+}
