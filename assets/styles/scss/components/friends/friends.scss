@@ -43,7 +43,7 @@ width: 60%;
 @media screen and (max-width: $tablet-width){
   .friends-slider {
       .slick-arrow {
-          top: 2%;
+          top: -7%;
         }
         .slick-prev {
           left: -20%;
@@ -51,6 +51,9 @@ width: 60%;
         .slick-next {
          right: -20%;
         }
+        img{
+          max-width: 80%;
+      }
       }
    
     
@@ -63,16 +66,19 @@ width: 60%;
   .friends-slider {
       margin: 4em auto;
   .slick-arrow {
-     top: 5%;
+     top:-3%;
       width: 40px;
       height: 40px;
     }
     .slick-prev {
-      left: -25%;
+      left: -20%;
     }
     .slick-next {
-     right: -25%;
+     right: -20%;
     }
+    img{
+      max-width: 70%;
+  }
   }
 } 
  

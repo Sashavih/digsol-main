@@ -219,7 +219,7 @@ a {
 .messageAnimation {
   display: none;
   position: fixed;
-  bottom: 7rem;
+  bottom: 4rem;
   width: 3rem;
   height: 3rem;
   padding: 1rem;
@@ -243,7 +243,7 @@ a {
 .up {
   display: none;
   position: fixed;
-  bottom: 7rem;
+  bottom: 4rem;
   width: 2.5rem;
   height: 2.5rem;
   padding: 0;
@@ -523,40 +523,40 @@ a {
   cursor: pointer;
 }
 .slider .slick-prev {
-  left: 0;
+  left: 20%;
   background: url("../../imgs/slider-prev.png") 0 0/100% no-repeat;
-  margin-left: 5rem;
 }
 .slider .slick-prev:hover {
   background: url("../../imgs/slider-prev-hover.png") 0 0/100% no-repeat;
 }
 .slider .slick-next {
-  right: 0;
+  right: 20%;
   background: url("../../imgs/slider-next.png") 0 0/100% no-repeat;
-  margin-right: 5rem;
 }
 .slider .slick-next:hover {
   background: url("../../imgs/slider-next-hover.png") 0 0/100% no-repeat;
 }
 .slider .slider__item img {
-  max-width: 65%;
+  max-width: 30%;
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 810px) {
   .slider {
-    margin: 8em auto;
+    margin: 3em auto 8rem auto;
   }
   .slider .slider__item img {
-    max-width: 90%;
+    max-width: 55%;
   }
   .slider .slick-arrow {
-    top: 110%;
+    top: auto;
+    bottom: -18%;
   }
   .slider .slick-prev {
-    left: 25%;
+    left: 36%;
   }
   .slider .slick-next {
-    right: 25%;
+    right: 36%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -570,24 +570,30 @@ a {
     width: 40px;
     height: 40px;
   }
-  .slider .slick-arrow {
-    top: 110%;
-  }
   .slider .slick-prev {
-    left: 10%;
+    left: 32%;
   }
   .slider .slick-next {
-    right: 10%;
+    right: 32%;
   }
 }
 .board {
-  min-height: 100vh;
+  margin-bottom: 5rem;
 }
 
 @media screen and (max-width: 480px) {
   .board {
     min-height: 100%;
-    padding-bottom: 5rem;
+    margin-bottom: 8rem;
+  }
+  #board2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 810px) {
+  .board {
+    min-height: 100%;
+    margin-bottom: 10rem;
   }
 }
 .pluses {
@@ -780,18 +786,28 @@ a {
   }
 }
 .marketing-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  text-align: start;
   gap: 2rem;
   align-items: center;
   justify-content: center;
   border: 1.7px;
   width: 85%;
   margin: 2rem auto;
+  cursor: default;
 }
-.marketing-box img {
+
+.marketing {
+  text-align: center;
+}
+.marketing img {
   margin: auto;
-  max-width: 80%;
+  max-width: 30%;
+  border-radius: 50px;
+}
+.marketing img:hover {
+  opacity: 0.9;
 }
 
 .marketing-box__about {
@@ -804,6 +820,8 @@ a {
   margin: 0.5em;
   border-radius: 20px;
   padding: 2rem;
+  width: 40rem;
+  min-height: 20rem;
 }
 .marketing-box__about:hover {
   box-shadow: 0px 0px 0px 4px #C8C8C8;
@@ -848,6 +866,9 @@ a {
     width: 90%;
     gap: 1rem;
   }
+  .marketing-box img {
+    max-width: 100%;
+  }
   .marketing-box__about {
     padding: 2rem 1rem;
   }
@@ -855,10 +876,12 @@ a {
 @media screen and (max-width: 480px) {
   .marketing-box {
     width: 93%;
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 1.5rem;
   }
   .marketing-box__about {
+    width: 100%;
+    min-height: 100%;
     align-items: center;
     gap: 0.5rem;
   }
@@ -975,13 +998,16 @@ a {
 
 @media screen and (max-width: 810px) {
   .friends-slider .slick-arrow {
-    top: 2%;
+    top: -7%;
   }
   .friends-slider .slick-prev {
     left: -20%;
   }
   .friends-slider .slick-next {
     right: -20%;
+  }
+  .friends-slider img {
+    max-width: 80%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -992,15 +1018,18 @@ a {
     margin: 4em auto;
   }
   .friends-slider .slick-arrow {
-    top: 5%;
+    top: -3%;
     width: 40px;
     height: 40px;
   }
   .friends-slider .slick-prev {
-    left: -25%;
+    left: -20%;
   }
   .friends-slider .slick-next {
-    right: -25%;
+    right: -20%;
+  }
+  .friends-slider img {
+    max-width: 70%;
   }
 }
 .footer {
@@ -1065,6 +1094,7 @@ a {
   display: flex;
   align-items: center;
   padding: 10px 65px;
+  gap: 1rem;
 }
 
 .left-menu ul {
@@ -1130,6 +1160,35 @@ a {
 }
 .info h2:hover {
   color: #bfbfbf;
+}
+
+@media screen and (max-width: 810px) {
+  .content {
+    flex-direction: column;
+    margin-top: 4rem;
+    padding: 0 2rem;
+  }
+  .info {
+    padding: 0 50px;
+    max-width: 100%;
+  }
+  .map {
+    height: 100%;
+  }
+  .map svg {
+    height: 60%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .content {
+    flex-direction: column;
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+  .info {
+    padding: 0 10px;
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

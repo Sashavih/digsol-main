@@ -1,10 +1,20 @@
 
 .board{
-    min-height: 100vh;
+   margin-bottom: 5rem;
+   
 }
 @media screen and (max-width: $mobile-width){
     .board{
         min-height: 100%;
-        padding-bottom: 5rem;
+        margin-bottom: 8rem;
+    }
+    #board2{
+        display: none;
+    }
+}
+@media screen and (max-width: $tablet-width){
+    .board{
+        min-height: 100%;
+        margin-bottom: 10rem;
     }
 }

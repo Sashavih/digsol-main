@@ -2,6 +2,7 @@
 	display: flex;
 	align-items: center;
 	padding: 10px 65px;
+	gap: 1rem;
 }
 
 .left-menu ul {
@@ -69,4 +70,35 @@ a {
     &:hover{
         color:#bfbfbf ;
     }
+}
+@media screen and (max-width: $tablet-width){
+	.content {
+		flex-direction: column;
+		margin-top: 4rem;
+		padding: 0 2rem;
+	}
+	.info {
+		padding: 0 50px;
+		max-width: 100%;
+	}
+	.map {
+		height: 100%;
+	}
+	
+	.map svg {
+		height: 60%;
+
+	}
+}
+@media screen and (max-width: $mobile-width){
+	.content {
+		flex-direction: column;
+		margin-top: 2rem;
+		padding: 0 1rem;
+	}
+	.info {
+		padding:  0 10px;
+		max-width: 100%;
+	}
+
 }
