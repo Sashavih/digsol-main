@@ -75,3 +75,4 @@ $mapLinks.forEach(el => {
 		requestData(id);
 	});
 });
+
