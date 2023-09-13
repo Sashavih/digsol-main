@@ -3,6 +3,7 @@
 	align-items: center;
 	padding: 10px 65px;
 	gap: 1rem;
+
 }
 
 .left-menu ul {
@@ -71,6 +72,7 @@ a {
         color:#bfbfbf ;
     }
 }
+
 @media screen and (max-width: $tablet-width){
 	.content {
 		flex-direction: column;
@@ -101,7 +103,8 @@ a {
 		max-width: 100%;
 	}
 	.map {
-		margin-bottom: 8em;
+		margin-bottom: 0;
 	}
 
 }
+

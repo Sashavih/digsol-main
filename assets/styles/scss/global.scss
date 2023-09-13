@@ -225,6 +225,9 @@
     right: 8rem;
     background-image: url("../../imgs/mail.png");
   }
+  .none-map{
+    display: block;
+  }
   
     
     @media screen and (max-width: $tablet-width){
@@ -276,7 +279,7 @@
         }
         .subtitle{
           font-size: 20px;
-          margin: 3.5rem auto 1rem auto;
+          margin: 2rem auto 1rem auto;
         }
       .btn{
           width: 10rem; 
@@ -293,5 +296,8 @@
       bottom: 2rem;
       right: 1.3rem;
       left: auto;
+    }
+    .okrug-7{
+      display: none;
     }
   }

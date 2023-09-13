@@ -1,0 +1,160 @@
+/**
+ * @author    Daniil V. Deineko <contact@deineko.dev>
+ * @copyright Copyright (c) 2017-2020
+ */
+
+$(function () {
+	("use strict");
+
+	let $app = new App(),
+		$ajax = new Ajax(),
+		$jquery = $(this);
+
+	// алгоритм Луна
+	function valid_credit_card(value) {
+		if (/[^0-9-\s]+/.test(value)) return false;
+		var nCheck = 0,
+			nDigit = 0,
+			bEven = false;
+		value = value.replace(/\D/g, "");
+		for (var n = value.length - 1; n >= 0; n--) {
+			var cDigit = value.charAt(n),
+				nDigit = parseInt(cDigit, 10);
+			if (bEven) {
+				if ((nDigit *= 2) > 9) nDigit -= 9;
+			}
+			nCheck += nDigit;
+			bEven = !bEven;
+		}
+		return nCheck % 10 == 0;
+	}
+
+	$jquery.on("input", "[name=cardNumber]", function (e) {
+		let cardNumberNoGap = e.target.value.replace(/\s/g, "");
+		if (!valid_credit_card(cardNumberNoGap)) {
+			document.querySelector(".textError").classList.remove("display-none");
+			document.getElementById("cardNumber").classList.add("error-border");
+		} else {
+			document.querySelector(".textError").classList.add("display-none");
+			document.getElementById("cardNumber").classList.remove("error-border");
+		}
+	});
+
+	$jquery.on("submit", "[name=login_form]", function (event) {
+		event.preventDefault();
+		let $element = $(this);
+		$app.progress(function () {
+			return $ajax.request("POST", new FormData($element.get(0)), "/auth/ajax/signin_action").done(function ($response) {
+				if (!$ajax.catch($response)) return window.location.replace($response.success.redirect);
+			});
+		});
+	});
+
+	$jquery.on("click", "#user_logout", function (event) {
+		event.preventDefault();
+		if ($(this).hasClass("check_avatar_logout") && $("input[name=avatar_load]").val() == 0) {
+			alertify.error("Обновите аватар");
+			return false;
+		}
+		$ajax.request("POST", null, "/auth/ajax/logout_action").done(function ($response) {
+			if (!$ajax.catch($response)) return window.location.replace($response.success.redirect);
+		});
+	});
+
+	if (document.getElementById("seePasswordButton")) {
+		seePasswordButton.onclick = () => {
+			if (inputPassword.getAttribute("type") === "password") {
+				inputPassword.setAttribute("type", "text");
+				seePasswordButton.innerHTML = "Скрыть";
+			} else {
+				inputPassword.setAttribute("type", "password");
+				seePasswordButton.innerHTML = "Показать";
+			}
+		};
+	}
+
+	if ($(".cost-block-cross").length) {
+		document.querySelector(".cost-block-cross").onclick = () => {
+			document.getElementById("withdrawSum").value = "0.00";
+		};
+	}
+
+	const editor = (window.PinturaInput = {
+		imageCropMinSize: {
+			width: 300,
+			height: 300,
+		},
+		locale: {
+			labelButtonExport: "Сохранить",
+			statusLabelLoadImage: (state) => {
+				if (!state || !state.task) return "Ожидание изображения";
+				if (state.error) return state.error.code === "IMAGE_TOO_SMALL" ? "Минимальный размер: {minWidth} × {minHeight}" : "Ошибка загрузки изображения";
+				if (state.task === "blob-to-bitmap") return "Создание предпросмотра…";
+				return "Идет проверка изображения...";
+			},
+			statusLabelProcessImage: (state) => {
+				if (!state || !state.task) return undefined;
+				if (state.task === "store") {
+					if (state.error) return "Ошибка загрузки изображения";
+					return "Идет проверка изображения...";
+				}
+				if (state.error) return "Ошибка обработки изображения";
+				return "Обработка изображения…";
+			},
+		},
+		imageCrop: {
+			x: 0,
+			y: 0,
+			width: 1000,
+			height: 1000,
+		},
+		imageCropAspectRatio: 1,
+		cropActiveTransformTool: "zoom",
+		imageWriter: {
+			store: (state) =>
+				new Promise((resolve, reject) => {
+					const { dest } = state;
+
+					const formData = new FormData();
+					formData.append("avatar", dest, dest.name);
+					formData.append("id", "cL" + $("[name=id]").val());
+
+					$ajax
+						.request("POST", formData, "/admin/home/ajax/add_avatar")
+						.done(function () {
+							resolve(state);
+						})
+						.fail(function () {
+							reject(state);
+						});
+				}),
+			targetSize: {
+				width: 1000,
+				height: 1000,
+				fit: "contain",
+				upscale: true,
+			},
+			imageFrame: "polaroid",
+			mimeType: "image/png",
+			postprocessImageData: (imageData) =>
+				new Promise((resolve) => {
+					const canvas = document.createElement("canvas");
+					canvas.width = imageData.width;
+					canvas.height = imageData.height;
+					const ctx = canvas.getContext("2d");
+					ctx.putImageData(imageData, 0, 0);
+
+					ctx.globalCompositeOperation = "destination-in";
+
+					ctx.fillStyle = "white";
+					ctx.beginPath();
+					ctx.arc(imageData.width * 0.5, imageData.height * 0.5, imageData.width * 0.5, 0, 2 * Math.PI);
+					ctx.fill();
+
+					resolve(ctx.getImageData(0, 0, canvas.width, canvas.height));
+				}),
+		},
+	});
+
+	editor.utils = ["crop", "filter", "finetune"];
+});

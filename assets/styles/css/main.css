@@ -279,6 +279,10 @@ a {
   background-image: url("../../imgs/mail.png");
 }
 
+.none-map {
+  display: block;
+}
+
 @media screen and (max-width: 810px) {
   .title {
     font-size: 36px;
@@ -325,7 +329,7 @@ a {
   }
   .subtitle {
     font-size: 20px;
-    margin: 3.5rem auto 1rem auto;
+    margin: 2rem auto 1rem auto;
   }
   .btn {
     width: 10rem;
@@ -342,6 +346,9 @@ a {
     bottom: 2rem;
     right: 1.3rem;
     left: auto;
+  }
+  .okrug-7 {
+    display: none;
   }
 }
 .header {
@@ -495,7 +502,7 @@ a {
 @media screen and (max-width: 480px) {
   .main-content {
     width: 100%;
-    margin-top: 10rem;
+    padding-top: 10rem;
     background-color: rgba(0, 0, 0, 0.668);
     border-radius: 0;
   }
@@ -504,7 +511,7 @@ a {
     font-size: 14px;
   }
   .main-block {
-    min-height: 90vh;
+    min-height: 100%;
     justify-content: start;
   }
 }
@@ -580,12 +587,13 @@ a {
   .slider .slick-arrow {
     width: 40px;
     height: 40px;
+    bottom: -14%;
   }
   .slider .slick-prev {
-    left: 32%;
+    left: 35%;
   }
   .slider .slick-next {
-    right: 32%;
+    right: 35%;
   }
 }
 .board {
@@ -604,7 +612,7 @@ a {
 @media screen and (max-width: 810px) {
   .board {
     min-height: 100%;
-    margin-bottom: 10rem;
+    margin-bottom: 6.5rem;
   }
 }
 .pluses {
@@ -1201,7 +1209,7 @@ a {
     max-width: 100%;
   }
   .map {
-    margin-bottom: 8em;
+    margin-bottom: 0;
   }
 }
 .mob-header {
