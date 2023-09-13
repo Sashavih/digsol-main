@@ -59,11 +59,16 @@
 @media screen and (max-width: $mobile-width){
     .main-content{  
         width: 100%;
+        margin-top: 10rem;
         background-color: rgba(0, 0, 0, 0.668);
         border-radius: 0;
         p{
             width:90%;
             font-size: 14px;
         }
+    }
+    .main-block{
+        min-height: 90vh;
+        justify-content: start;
     }
 }

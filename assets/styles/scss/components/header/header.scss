@@ -82,13 +82,15 @@
         }
 }
 @media screen and (max-width: $mobile-width){
-  
+  .header{
+    display: none !important;
+  }
     .header__nav{
       display: none;
         }
         .header__logo{
             img{
-                max-width: 4rem;
+                max-width: 10%;
             }
         }
 }

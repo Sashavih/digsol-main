@@ -21,13 +21,33 @@
               <li><a class="bottom-border" href="./index.html">о компании</a></li>
               <li><a class="bottom-border" href="./active.html">продукты</a></li>
               <li><a class="bottom-border" href="./map.html">охват</a></li>
-              <li><a class="bottom-border" href="./detox.html">контакты</a></li>
               <li class="header__contacts">
                 <a href="tel:+74951234647">+7 495 128-28-18</a>
                 <a href="mailto:support@digsol.tech?subject=Заявка с сайта">support@digsol.tech</a></li>
             </ul>
         </nav>
     </header>
+    <!-- mob-header -->
+    <header class="mob-header">
+        <a href="./index.html" class="header__item header__logo fade-animation">
+            <img src="./assets/imgs/logo.png" alt="logo"/>
+        </a>
+        <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <a href="./index.html"><li>О компании</li></a>
+                <a href="#"><li>Продукты</li></a>
+                <a href="./map.html"><li>Охват</li></a>
+              </ul>
+            </div>
+          </nav>
+    </header>
+
+
     <!-- MAIN-BLOCK -->
     <button onclick="topFunction()" class="messageAnimation mail">
     </button>
@@ -641,7 +661,7 @@
                 <h2 class="feedback__title">Обратная связь</h2>
             <p>Свяжитесь с нами, и мы ответим на все интериующие вас вопросы</p>
             </div>
-            <a class="btn btn_border"><span>написать нам</span></a>
+            <a class="btn btn_border" href="mailto:support@digsol.tech?subject=Заявка с сайта"><span>написать нам</span></a>
         </article>
     </main>
     <footer class="footer">
@@ -657,5 +677,6 @@
     <script src="./assets/scripts/gallery-slider.js"></script>
     <script src="./assets/scripts/friends-slider.js"></script>
     <script src="./assets/scripts/header-scroll.js"></script>
+    
 </body>
 </html>
