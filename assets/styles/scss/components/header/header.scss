@@ -5,11 +5,12 @@
     z-index: 1000;
     position: fixed;
     width: 100%;
-    top: 1%;
+    top: 0;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding:0.8rem 4rem;
+    // background-color: rgba(0, 0, 0, 0.219);
    
 }
 #map-header{

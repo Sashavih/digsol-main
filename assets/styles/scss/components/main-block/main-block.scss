@@ -2,6 +2,7 @@
 .main-block{
     background: no-repeat center/100% url('../../imgs/luk.jpg');
     background-size: cover;
+    background-position: 100% 100%;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -9,7 +10,9 @@
     justify-content: center;
 }
 .main-content{
-    width: 50%;
+    background-color: rgba(0, 0, 0, 0.877);
+    border-radius: 50px;
+    width: 38rem;
     padding: 1rem 2rem;
     height: 100%;
     margin: 0 5rem;
@@ -55,7 +58,9 @@
 }
 @media screen and (max-width: $mobile-width){
     .main-content{  
-        width: 95%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.668);
+        border-radius: 0;
         p{
             width:90%;
             font-size: 14px;

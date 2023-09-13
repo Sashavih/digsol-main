@@ -156,7 +156,7 @@ a {
   height: 15px;
   position: absolute;
   opacity: 0;
-  top: 0;
+  top: 2px;
   right: -10px;
   transition: 0.5s;
 }
@@ -347,7 +347,7 @@ a {
   z-index: 1000;
   position: fixed;
   width: 100%;
-  top: 1%;
+  top: 0;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -432,6 +432,7 @@ a {
 .main-block {
   background: no-repeat center/100% url("../../imgs/luk.jpg");
   background-size: cover;
+  background-position: 100% 100%;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -440,7 +441,9 @@ a {
 }
 
 .main-content {
-  width: 50%;
+  background-color: rgba(0, 0, 0, 0.877);
+  border-radius: 50px;
+  width: 38rem;
   padding: 1rem 2rem;
   height: 100%;
   margin: 0 5rem;
@@ -485,7 +488,9 @@ a {
 }
 @media screen and (max-width: 480px) {
   .main-content {
-    width: 95%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.668);
+    border-radius: 0;
   }
   .main-content p {
     width: 90%;
