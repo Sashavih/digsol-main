@@ -40,6 +40,14 @@ $leftLinks.forEach(el => {
 		if (currentPath) currentPath.forEach(el => el.style.cssText = ``);
 		self.classList.remove('active');
 	});
+	el.addEventListener('click', (e) => {
+		e.preventDefault();
+		let self = e.currentTarget;
+		let selfClass = self.getAttribute('href');
+		let currentElement = document.querySelector(`.left-menu a[href="${selfClass}"]`);
+		let id = parseInt(currentElement.dataset.id);
+		requestData(id);
+	});
 });
 
 $mapLinks.forEach(el => {

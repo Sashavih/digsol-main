@@ -54,8 +54,10 @@ a {
 }
 
 .info {
-	padding:  0 100px;
+	padding:  0 5rem;
+	border: 1px solid red;
 	max-width: 70%;
+	min-height: 8rem;
     margin:2rem auto 0 auto;
     text-align: center;
     cursor: default;
@@ -105,6 +107,5 @@ a {
 	.map {
 		margin-bottom: 0;
 	}
-
 }
 
