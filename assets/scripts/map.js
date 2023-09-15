@@ -1,3 +1,4 @@
+
 const $leftLinks = document.querySelectorAll('.left-menu a'),
 			$mapLinks = document.querySelectorAll('.map a'),
 			$info = document.querySelector('.info');
@@ -83,4 +84,3 @@ $mapLinks.forEach(el => {
 		requestData(id);
 	});
 });
-

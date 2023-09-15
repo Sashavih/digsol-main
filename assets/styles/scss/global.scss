@@ -30,22 +30,22 @@
   .fade-animation{
     display: none;
     transform: translateX(-150%);
-    animation: ani 2s forwards;
+    animation: ani 1.5s forwards;
   }
   .fade-animation2{
     display: none;
     transform: translateX(-50%);
-    animation: ani 2.5s forwards;
+    animation: ani 2s forwards;
   }
   .fade-animation3{
     display: none;
     transform: translateX(-50%);
-    animation: ani 3s forwards;
+    animation: ani 2.5s forwards;
   }
   .fade-animation4{
     display: none;
     transform: translateX(-50%);
-    animation: ani 3.5s forwards;
+    animation: ani 3s forwards;
   }
 
   .title{
@@ -127,6 +127,9 @@
     display: block;
     transform: translateX(-150%);
     animation: ani-drop-down 1s forwards;
+}
+.show{
+  display: block;
 }
 .none{
     display: none;

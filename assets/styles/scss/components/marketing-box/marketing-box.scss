@@ -4,8 +4,8 @@
  flex-direction: row;
  text-align: start;
     gap: 2rem;
-    align-items: center;
     justify-content: center;
+    align-items: baseline;
     border: 1.7px;
     width: 85%;
     margin: 2rem auto;
@@ -14,29 +14,22 @@
 }
 .marketing{
     text-align: center;
-    img{
-        margin:auto;
-        max-width: 30%;
-     border-radius: 50px;
-     &:hover{
-        opacity: 0.9;
-     }
-    } 
 }
 .marketing-box__about{
     font-family: 'Roboto-Regular', sans-serif;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    box-shadow: 0px 0px 0px 1.5px $text-gray;
-    transition: box-shadow 0.6s linear;
+    background-color: #0000004b;
+    transition: 0.3s linear;
     margin: 0.5em;
     border-radius: 20px;
     padding: 2rem;
-    width: 40rem;
-    min-height: 20rem;
+     width:50%;
+    min-height: 23.5rem;
+    
     &:hover{
-        box-shadow: 0px 0px 0px 4px $text-gray;
+       transform: scale(1.02);
     }
     a{
         align-self: center;
@@ -51,65 +44,56 @@
     font-size: 18px;
     text-transform: uppercase;
     cursor: default;
-    text-align: start;
+    text-align: center;
 }
 
-.marketing-box_icon{
-    margin-top: 0.4rem;
-    cursor: default;
-    &::before{
-    content: "";
- padding:0.7rem ;
- margin-right: 1rem;
- margin-right: 0.5;
-  background: url("../../imgs/orange-icon.png") no-repeat;
-  background-size: 60%;
-  background-position: 50% 50%;
-    }
-    &:hover{
-        &::before{
-          background: url("../../imgs/gray-icon.png") no-repeat;
-          background-size: 60%;
-          background-position: 50% 50%;
-            }
+.marketing-box__icon{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    padding:0.2rem;
+    img{
+        max-width: 0.6rem;
     }
 }
+.marketing-box__img{
+    margin: auto;
+    max-width: 80%;
+}
+
 
 @media screen and (max-width: $tablet-width){
     .marketing-box{
-        width: 90%;
-        gap: 1rem;
-        img{
-            max-width: 100%;
-        }
+        width: 93%;
+        flex-direction: column;
     }
+
     .marketing-box__about{
-        padding: 2rem 1rem;
+        width: 90%;
+        margin: auto;
+        min-height: 100%;
+        align-items: center;
+        gap: 1rem;
     }
-}
+    }
 
 @media screen and (max-width: $mobile-width){
 .marketing-box{
-    width: 93%;
-    flex-direction: column;
     gap: 1.5rem;
 }
 .marketing-box__about{
-    width: 100%;
-    min-height: 100%;
-    align-items: center;
+    padding: 1rem;
     gap: 0.5rem;
-    p{
-        text-align: center;
-    }
+
 }
 .marketing__title{
     font-size: 16px;
 }
 .marketing-box_icon{
     margin-top: 0rem;
-    &::before{
- padding:0.4rem ;
-    }
+}
+.center{
+    text-align: center;
 }
 }
