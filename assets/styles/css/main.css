@@ -997,7 +997,16 @@ a {
   background: url("../../imgs/slider-next-hover.png") 0 0/100% no-repeat;
 }
 .friends-slider img {
-  max-width: 95%;
+  max-width: 80%;
+  padding: 0rem 1rem;
+}
+
+#big {
+  height: 4rem;
+}
+
+#small {
+  max-width: 40%;
 }
 
 @media screen and (max-width: 810px) {
@@ -1012,6 +1021,7 @@ a {
   }
   .friends-slider img {
     max-width: 80%;
+    height: auto;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1366,7 +1376,6 @@ a {
     width: 100%;
     gap: 1.5rem;
     margin-bottom: 2rem;
-    text-align: center;
   }
   .about-content li {
     margin: 0 auto;
